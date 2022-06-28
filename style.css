@@ -1,0 +1,531 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900&display=swap);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+}
+
+body {
+    line-height: 1;
+    font-family: Montserrat;
+    color: #263742;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}
+
+/* ---------------------------------------- */
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+/* ---------------------------------------- */
+[class*="__container"] {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+/*------------------------------------------*/
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.header__container {
+
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 75px;
+}
+
+.logo {
+    margin-top: -20px;
+    padding: 40px 5px 5px 5px;
+    background-color: #fa5c65;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.alogo {
+    color: white;
+}
+
+.alogo:hover {
+    text-decoration: none;
+}
+
+.logo:hover {
+    transition: all 0.5s;
+    background-color: #263742;
+}
+
+.fa:hover {
+    color: #fa5c65;
+    transition: all 0.5s;
+
+}
+
+nav ul {
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #263742;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+
+a:hover {
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.checkbtn {
+    position: relative;
+    font-size: 30px;
+    color: #263742;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    z-index: 5;
+}
+
+#check {
+    display: none;
+}
+
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #9aa0ab;
+        top: 0px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 3;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+/*----------------------------------------------------------*/
+.hero {
+    background-image: url(IMG/hero01.png);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 1000px;
+}
+
+.hero__container {
+    padding: 55px 15px 200px 15px;
+
+}
+
+.hero__itle {
+
+    margin-top: 375px;
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero__itle span {
+    color: #fa5c65;
+}
+
+.hero__text {
+    font-size: 16px;
+    padding: 25px 0px 65px 0px;
+}
+
+.hero_button {
+    background-color: #fa5c65;
+    border-radius: 5px;
+    padding: 20px 40px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+
+}
+
+.hero_button:hover {
+    transition: all 0.5s;
+    background-color: #263742;
+    text-decoration: none;
+}
+
+/*---------------------------------------------------*/
+.card_section {}
+
+.card_section__container {
+    padding: 80px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card_coloumn {
+    flex: 0 1 33.333%;
+}
+
+.card_item {
+    padding: 10px;
+}
+
+.card_title {
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.card_title span {
+    color: #fa5c65;
+}
+
+.card_text {
+    font-size: 15px;
+    color: #9aa0ab;
+    padding: 25px 0px;
+}
+
+.card_button {
+    color: #fa5c65;
+    text-transform: uppercase;
+}
+
+/*-------------------------------------------------*/
+.portfolio_section {}
+
+.portfolio__container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 150px;
+}
+
+.portfolio_coloumn1 {
+    flex: 50%;
+}
+
+.portfolio_coloumn2 {
+    flex: 50%;
+}
+
+.portfolio_title {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.portfolio_second-title {
+    padding-top: 25px;
+    font-size: 16px;
+    color: #314a5b;
+}
+
+.portfolio_title span {
+    color: #fa5c65;
+}
+
+.portfolio_text1 {
+    font-size: 15px;
+    color: #9aa0ab;
+    padding: 25px 0px;
+}
+
+.portfolio_text2 {
+    font-size: 15px;
+    color: #9aa0ab;
+    padding-bottom: 50px;
+}
+
+.portfolio_button {
+    color: #fa5c65;
+    text-transform: uppercase;
+}
+
+/*----------------------------------------------*/
+.our_team-section {}
+
+.our_team__container {}
+
+.our_team-title {
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 32px;
+    color: #314a5b;
+}
+
+.our_team-title span {
+    color: #fa5c65;
+}
+
+.our_team-text {
+    font-size: 16px;
+    color: #9aa0ab;
+}
+
+.our_team_cards-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.our_team_general-coloumn {
+    padding: 40px 0px;
+    flex: 33.333%
+}
+
+.our_team_cards-body2 {
+    align-items: center;
+    display: flex;
+}
+
+.our_team-coloumn1 {}
+
+.our_team-coloumn2 {}
+
+.coloumn_title {
+    padding-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.coloumn_text1 {
+    padding: 15px 0px;
+    font-size: 14px;
+    color: #fa5c65;
+}
+
+.coloumn_text2 {
+    font-size: 14px;
+    color: #9aa0ab;
+    padding-bottom: 15px;
+}
+
+.our_team_button-div {
+    padding: 20px 0px 20px 0px;
+    text-align: right;
+}
+
+.our_team_button {
+    color: #fa5c65;
+    text-transform: uppercase;
+}
+
+/*----------------------------------------*/
+.footer {}
+
+.footer__container {
+    padding: 50px 0px;
+}
+
+.footer_divider {
+    padding-bottom: 50px;
+    border-top: 1px solid #9aa0ab;
+    width: 100%;
+}
+
+.footer_content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_content-social {
+    gap: 25px;
+}
+
+.footer_content-social .fa {
+    padding-left: 10px;
+    color: #9aa0ab;
+}
+
+.footer_content-social .fa:hover {
+    transition: all 0.5s;
+    padding-left: 10px;
+    color: #fa5c65;
+}
+
+.footer_content-copyright {}
+
+.copyright_text {
+    font-size: 15px;
+    color: #9aa0ab;
+}
+
+/*------------Media-------------*/
+
+@media screen and (max-width:1024px) {
+    .hero {
+        background-image:
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.466), rgba(255, 255, 255, 0.466)),
+            url(IMG/hero01.png);
+    }
+
+    .hero__itle {
+        font-size: 36px;
+        margin-top: 200px;
+    }
+
+    .our_team_general-coloumn {
+        flex: 50%;
+    }
+
+    .our_team-title,
+    .our_team-text {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .hero {
+        background-position: center;
+    }
+
+    .hero__itle {
+        font-size: 36px;
+        margin-top: 175px;
+    }
+
+    .card_coloumn {
+        flex: 100%;
+        padding-bottom: 50px;
+    }
+
+    .card_item {
+        text-align: center;
+    }
+
+    .portfolio_coloumn2 {
+        padding-top: 50px;
+        text-align: center;
+
+    }
+
+    .our_team_general-coloumn {
+        flex: 100%;
+    }
+
+    .our_team__container {
+        max-width: 400px;
+    }
+
+
+}
+
+@media screen and (max-width:627px) {
+    .hero {
+        background-position: center;
+    }
+
+    .menu__list {
+        display: none;
+    }
+
+    .hero__itle {
+        font-size: 36px;
+    }
+
+    .footer_content {
+        display: block;
+    }
+
+    .footer_content-social,
+    .footer_content-copyright {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:449px) {
+
+    .portfolio_coloumn1 img {
+        width: 100%;
+    }
+
+    .hero__itle {
+        font-size: 24px;
+    }
+
+    .hero__container {
+        padding: 55px 15px 100px 15px;
+    }
+}
